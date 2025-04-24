@@ -21,7 +21,7 @@ const Header: React.FC = () => {
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Testimonials', href: '#testimonials' },
+    // Testimonials link removed
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -58,11 +58,7 @@ const Header: React.FC = () => {
               className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
             >
-              {theme === 'light' ? (
-                <Moon className="w-5 h-5 text-gray-700" />
-              ) : (
-                <Sun className="w-5 h-5 text-gray-300" />
-              )}
+              {theme === 'light' ? <Moon className="w-5 h-5 text-gray-700" /> : <Sun className="w-5 h-5 text-gray-300" />}
             </button>
 
             {/* Mobile menu button */}
