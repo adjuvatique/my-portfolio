@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AtSign, MapPin, Phone, Send, Linkedin, Github, Twitter } from 'lucide-react';
+import { AtSign, MapPin, Phone, Send, Linkedin, Github } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -31,16 +31,9 @@ const Contact: React.FC = () => {
         message: 'Спасибо за ваше сообщение! Я скоро свяжусь с вами.'
       });
       
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
+      setFormData({ name: '', email: '', subject: '', message: '' });
       
-      setTimeout(() => {
-        setFormStatus(null);
-      }, 5000);
+      setTimeout(() => setFormStatus(null), 5000);
     }, 1000);
   };
 
@@ -70,7 +63,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</h4>
-                    <a href="mailto:a.bilanins@yahoo.com" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    <a href="mailto:a.bilanins@yahoo.com" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
                       a.bilanins@yahoo.com
                     </a>
                   </div>
@@ -82,7 +75,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Phone</h4>
-                    <a href="tel:+447935487870" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    <a href="tel:+447935487870" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
                       +44 7935 487870
                     </a>
                   </div>
@@ -94,9 +87,19 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Location</h4>
-                    <p className="text-gray-900 dark:text-white">
-                      Antrim, Northern Ireland
-                    </p>
+                    <p className="text-gray-900 dark:text-white">Antrim, Northern Ireland</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full mr-4">
+                    <Send className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Telegram</h4>
+                    <a href="https://t.me/adjuvatiue" target="_blank" rel="noopener" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
+                      @adjuvatiue
+                    </a>
                   </div>
                 </div>
               </div>
@@ -104,23 +107,21 @@ const Contact: React.FC = () => {
               <div className="mt-8">
                 <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-4">Connect With Me</h4>
                 <div className="flex space-x-4">
-                  <a href="https://www.linkedin.com/in/adjuvatique" target="_blank" rel="noopener" className="bg-gray-200 dark:bg-gray-700 p-3 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors" aria-label="LinkedIn">
+                  <a href="https://www.linkedin.com/in/aleksandrs-b-69ba5135a/" target="_blank" rel="noopener" className="bg-gray-200 dark:bg-gray-700 p-3 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30">
                     <Linkedin className="w-5 h-5 text-gray-700 dark:text-gray-300" />
                   </a>
-                  <a href="https://github.com/adjuvatique" target="_blank" rel="noopener" className="bg-gray-200 dark:bg-gray-700 p-3 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors" aria-label="GitHub">
+                  <a href="https://github.com/adjuvatique" target="_blank" rel="noopener" className="bg-gray-200 dark:bg-gray-700 p-3 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30">
                     <Github className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                  </a>
-                  <a href="https://twitter.com/adjuvatique" target="_blank" rel="noopener" className="bg-gray-200 dark:bg-gray-700 p-3 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors" aria-label="Twitter">
-                    <Twitter className="w-5 h-5 text-gray-700 dark:text-gray-300" />
                   </a>
                 </div>
               </div>
               
               <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
                 <a 
-                  href="/Resume_compressed.pdf" 
+                  href="https://drive.google.com/file/d/10l-6_VSs80IEqHV06Vg_EyuVWMK2h2wa/view?usp=sharing" 
                   className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
-                  download
+                  target="_blank"
+                  rel="noopener"
                 >
                   Download Resume
                 </a>
@@ -201,8 +202,8 @@ const Contact: React.FC = () => {
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 ></textarea>
               </div>
               
