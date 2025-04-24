@@ -23,15 +23,14 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Simulate form submission (in a real app, this would call an API)
+    // Симуляция отправки формы
     setTimeout(() => {
       setFormStatus({
         submitted: true,
         success: true,
-        message: 'Thank you for your message! I\'ll get back to you soon.'
+        message: 'Спасибо за ваше сообщение! Я скоро свяжусь с вами.'
       });
       
-      // Reset form after submission
       setFormData({
         name: '',
         email: '',
@@ -39,7 +38,6 @@ const Contact: React.FC = () => {
         message: ''
       });
       
-      // Clear success message after 5 seconds
       setTimeout(() => {
         setFormStatus(null);
       }, 5000);
@@ -55,7 +53,7 @@ const Contact: React.FC = () => {
             <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 dark:bg-blue-400 transform translate-y-2"></span>
           </h2>
           <p className="mt-6 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-            Interested in working together? I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            Буду рад обсудить новые проекты, идеи или возможности сотрудничества.
           </p>
         </div>
 
@@ -72,8 +70,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</h4>
-                    <a href="mailto:jane.smith@example.com" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                      jane.smith@example.com
+                    <a href="mailto:a.bilanins@yahoo.com" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                      a.bilanins@yahoo.com
                     </a>
                   </div>
                 </div>
@@ -84,8 +82,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Phone</h4>
-                    <a href="tel:+15551234567" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                      +1 (555) 123-4567
+                    <a href="tel:+447935487870" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                      +44 7935 487870
                     </a>
                   </div>
                 </div>
@@ -97,7 +95,7 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Location</h4>
                     <p className="text-gray-900 dark:text-white">
-                      San Francisco, California
+                      Antrim, Northern Ireland
                     </p>
                   </div>
                 </div>
@@ -106,13 +104,13 @@ const Contact: React.FC = () => {
               <div className="mt-8">
                 <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-4">Connect With Me</h4>
                 <div className="flex space-x-4">
-                  <a href="#" className="bg-gray-200 dark:bg-gray-700 p-3 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors" aria-label="LinkedIn">
+                  <a href="https://www.linkedin.com/in/adjuvatique" target="_blank" rel="noopener" className="bg-gray-200 dark:bg-gray-700 p-3 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors" aria-label="LinkedIn">
                     <Linkedin className="w-5 h-5 text-gray-700 dark:text-gray-300" />
                   </a>
-                  <a href="#" className="bg-gray-200 dark:bg-gray-700 p-3 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors" aria-label="GitHub">
+                  <a href="https://github.com/adjuvatique" target="_blank" rel="noopener" className="bg-gray-200 dark:bg-gray-700 p-3 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors" aria-label="GitHub">
                     <Github className="w-5 h-5 text-gray-700 dark:text-gray-300" />
                   </a>
-                  <a href="#" className="bg-gray-200 dark:bg-gray-700 p-3 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors" aria-label="Twitter">
+                  <a href="https://twitter.com/adjuvatique" target="_blank" rel="noopener" className="bg-gray-200 dark:bg-gray-700 p-3 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors" aria-label="Twitter">
                     <Twitter className="w-5 h-5 text-gray-700 dark:text-gray-300" />
                   </a>
                 </div>
@@ -120,14 +118,11 @@ const Contact: React.FC = () => {
               
               <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
                 <a 
-                  href="/resume.pdf" 
+                  href="/Resume_compressed.pdf" 
                   className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
                   download
                 >
                   Download Resume
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                  </svg>
                 </a>
               </div>
             </div>
@@ -206,8 +201,8 @@ const Contact: React.FC = () => {
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 ></textarea>
               </div>
               
