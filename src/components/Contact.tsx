@@ -1,5 +1,5 @@
 import React from 'react';
-import { AtSign, Phone, MapPin, Linkedin, Github } from 'lucide-react';
+import { AtSign, Phone, MapPin, Linkedin, Github, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
