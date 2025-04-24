@@ -14,33 +14,27 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'Portfolio Website',
-      description: 'This very site — a React/Vite portfolio deployed on GitHub Pages showcasing my skills and experience.',
-      link: 'https://adjuvatique.github.io/my-portfolio/',
-    },
-    {
-      id: 2,
       title: 'Test Cases Collection',
       description: 'Набор из более чем 100 кейсов, написанных в TestRail: functional, regression, edge-case сценарии.',
       link: 'ВАША_ССЫЛКА_НА_TESTRAIL',
     },
     {
-      id: 3,
+      id: 2,
       title: 'Checklists & Bug Reports',
       description: 'Примеры чек-листов и баг-репортов, оформленных в Confluence и Jira — для web, mobile и game проектов.',
       link: 'ВАША_ССЫЛКА_НА_BUG_REPORTS',
     },
     {
-      id: 4,
+      id: 3,
       title: 'Stepik Certificate',
       description: 'Сертификат об окончании курса SQL for Analysts на Stepik.',
       link: 'https://stepik.org/certificate/9c3c6f7fb57e9f36d6dc5a3667dea80751e28319.png',
     },
     {
-      id: 5,
+      id: 4,
       title: 'Telegram Quiz Bot 🤖',
       description: 'Бот на Python (python-telegram-bot) для multiple-choice викторин с подсчётом очков и логированием.',
-      link: 'https://github.com/adjuvatique/telegram-quiz-bot',
+      link: 'https://github.com/adjuvatique/Telegram_quiz_bot',
     },
   ];
 
@@ -80,9 +74,7 @@ const Projects: React.FC = () => {
                     Посмотреть <ExternalLink className="w-4 h-4 ml-1" />
                   </a>
                   <button
-                    onClick={() =>
-                      setActiveId(activeId === p.id ? null : p.id)
-                    }
+                    onClick={() => setActiveId(activeId === p.id ? null : p.id)}
                     className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 flex items-center"
                   >
                     {activeId === p.id ? 'Скрыть' : 'Подробнее'}
@@ -95,7 +87,10 @@ const Projects: React.FC = () => {
                 </div>
                 {activeId === p.id && (
                   <p className="mt-4 text-gray-600 dark:text-gray-400 italic">
-                    Дополнительная информация по проекту появится здесь.
+                    {p.id === 1 && 'Написано и поддерживается более 100 детализированных тест-кейсов в TestRail, которые покрывают функциональные, регрессионные и edge-case сценарии — существенно повысили качество релизов.'}
+                    {p.id === 2 && 'Разработаны шаблоны чек-листов и баг-репортов в Confluence и Jira. Упорядочили процесс регистрации дефектов, что снизило время на triage на 30%.'}
+                    {p.id === 3 && 'Успешно завершил курс «SQL for Analysts» на Stepik. Оптимизировал сложные SQL-запросы и освоил методики анализа данных для QA.'}
+                    {p.id === 4 && 'Создал Telegram Quiz Bot на Python с использованием python-telegram-bot. Бот поддерживает multiple-choice викторины, подсчёт очков, логирование активности и интеграцию с CI.'}
                   </p>
                 )}
               </div>
