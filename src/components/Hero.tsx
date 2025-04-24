@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Clipboard, Code, TestTube } from 'lucide-react';
+import { ArrowDown, Clipboard, TestTube, Code } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -14,12 +14,17 @@ const Hero: React.FC = () => {
               Hello, I'm
             </h2>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight animate-slideIn">
-              Jane Smith
+              Aleksandrs Bilanins
               <span className="block text-blue-600 dark:text-blue-400 mt-2">QA Engineer</span>
             </h1>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed animate-fadeIn delay-200">
-              Detail-oriented Quality Assurance Engineer with 6+ years of experience ensuring software excellence through comprehensive testing strategies. Specialized in automation, performance testing, and building robust QA frameworks that catch issues before they reach production.
+              QA Engineer with hands-on experience in manual and API testing of web, mobile, and game applications. Skilled in writing and executing test cases, analyzing logs, and collaborating with developers to ensure product quality. Currently upskilling in Python/Selenium automation.
             </p>
+            <ul className="space-y-1 text-gray-700 dark:text-gray-300 animate-fadeIn delay-200">
+              <li>📞 +44 7935 487870</li>
+              <li>✉️ a.bilanins@yahoo.com</li>
+              <li>📍 Antrim, Northern Ireland</li>
+            </ul>
             <div className="flex flex-wrap gap-4 pt-4 animate-fadeIn delay-300">
               <a 
                 href="#contact" 
@@ -41,35 +46,15 @@ const Hero: React.FC = () => {
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-tr from-blue-500 to-teal-400 opacity-20 dark:opacity-30 absolute -top-5 -left-5"></div>
               <div className="w-64 h-64 sm:w-80 sm:h-80 relative z-10 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-xl">
                 <div className="grid grid-cols-2 gap-4 h-full">
-                  <div className="col-span-2 sm:col-span-1 bg-gray-50 dark:bg-gray-700 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-md transition-all">
-                    <TestTube className="w-8 h-8 text-blue-500 mb-2" />
-                    <h3 className="font-medium text-gray-900 dark:text-white">Test Automation</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">Selenium, Cypress, Playwright</p>
+                  <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-md transition-all">
+                    <Clipboard className="w-8 h-8 text-orange-500 mb-2" />
+                    <h3 className="font-medium text-gray-900 dark:text-white">Manual Testing</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">Test case design • Functional & Regression</p>
                   </div>
                   <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-md transition-all">
-                    <Code className="w-8 h-8 text-teal-500 mb-2" />
-                    <h3 className="font-medium text-gray-900 dark:text-white">CI/CD</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">Jenkins, GitHub Actions</p>
+                    <TestTube className="w-8 h-8 text-blue-500 mb-2" />
+                    <h3 className="font-medium text-gray-900 dark:text-white">API Testing</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">Postman • Charles Proxy • Selenium</p>
                   </div>
                   <div className="col-span-2 bg-gray-50 dark:bg-gray-700 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-md transition-all">
-                    <Clipboard className="w-8 h-8 text-orange-500 mb-2" />
-                    <h3 className="font-medium text-gray-900 dark:text-white">Testing Lifecycle</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">Requirements Analysis • Test Planning • Execution • Reporting</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
-          <a href="#skills" aria-label="Scroll to Skills section">
-            <ArrowDown className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Hero;
+                    <Code className="w-8 h-8 text-teal-500 mb
