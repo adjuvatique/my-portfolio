@@ -3,8 +3,8 @@ import { ArrowDown, Clipboard, TestTube, Code } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="pt-20 min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -26,21 +26,21 @@ const Hero: React.FC = () => {
               <li>📍 Antrim, Northern Ireland</li>
             </ul>
             <div className="flex flex-wrap gap-4 pt-4 animate-fadeIn delay-300">
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-md transition-all transform hover:scale-105"
               >
                 Get in Touch
               </a>
-              <a 
-                href="#projects" 
+              <a
+                href="#projects"
                 className="px-6 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-medium rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition-all transform hover:scale-105"
               >
                 View Projects
               </a>
             </div>
           </div>
-          
+
           <div className="w-full lg:w-1/2 flex justify-center animate-fadeIn delay-400">
             <div className="relative">
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-tr from-blue-500 to-teal-400 opacity-20 dark:opacity-30 absolute -top-5 -left-5"></div>
@@ -57,4 +57,24 @@ const Hero: React.FC = () => {
                     <p className="text-sm text-gray-600 dark:text-gray-300">Postman • Charles Proxy • Selenium</p>
                   </div>
                   <div className="col-span-2 bg-gray-50 dark:bg-gray-700 rounded-lg p-4 flex flex-col items-center justify-center text-center hover:shadow-md transition-all">
-                    <Code className="w-8 h-8 text-teal-500 mb
+                    <Code className="w-8 h-8 text-teal-500 mb-2" />
+                    <h3 className="font-medium text-gray-900 dark:text-white">Game Testing</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">Unity/Unreal • Performance & UX checks</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+          <a href="#skills" aria-label="Scroll to Skills section">
+            <ArrowDown className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
