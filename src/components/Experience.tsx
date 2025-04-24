@@ -14,29 +14,41 @@ const Experience: React.FC = () => {
   const experiences: ExperienceItem[] = [
     {
       id: 1,
-      role: 'QA Engineer',
-      company: 'Z-Software',
-      period: 'Aug 2024 – Apr 2025',
-      location: 'Remote',
+      role: 'Freelance QA Engineer (Self-employed)',
+      company: '',
+      period: 'Jan 2023 – Present (2 years 4 months)',
+      location: 'United Kingdom',
       bullets: [
-        'Tested game functionality on PC and mobile, uncovering 30+ UX issues and improving user retention',
-        'Wrote over 100 custom test cases in TestRail covering gameplay, UI and performance, cutting UAT bugs by 40%',
-        'Logged 150+ bugs in Jira with severity tags, helping developers prioritize and fix faster',
-        'Ran performance checks across Windows, Android and iOS platforms, ensuring consistent 60+ FPS',
-        'Onboarded junior testers and improved internal review workflow'
+        'Tested over 10 web and mobile applications (MVPs and production) with focus on usability, functionality, and stability',
+        'Wrote and executed detailed test cases, recreated issues, and collaborated with clients to clarify requirements',
+        'Logged 100+ bugs in Jira, including several high-priority issues that improved release quality',
+        'Performed API and microservice testing using Postman and Kafka; conducted integration and exploratory testing',
+        'Worked with tools like Chrome DevTools, Charles Proxy, Kibana, and DBeaver (PostgreSQL) for log analysis and backend validation',
+        'Ran cross-browser and cross-device testing',
+        'Selected Projects:',
+        '• TwiceUp: UI and database testing with Chrome DevTools and PostgreSQL (DBeaver); identified 20+ UX issues',
+        '• Turbo Casino: Validated registration, payment, and gameplay flows; used Charles Proxy for backend event validation',
+        '• Benefactory: Performed REST API testing for filters and review CRUD; reported bugs using Jira templates with severity tags'
       ]
     },
     {
       id: 2,
-      role: 'Freelance QA Engineer (Remote)',
-      company: '',
-      period: 'Jan 2023 – Present',
-      location: 'UK & EU',
+      role: 'QA Engineer',
+      company: 'Z-Software GmbH',
+      period: 'Aug 2024 – Apr 2025 (9 months)',
+      location: 'Hamburg, Germany',
       bullets: [
-        'Collaborated with 10+ web and mobile clients on QA for early-stage apps and MVPs',
-        'Wrote test scenarios based on real user flows, focusing on usability, functionality, and edge cases',
-        'Reported 100+ bugs, including critical issues, reducing miscommunication errors by 30%',
-        'Provided detailed bug reports and checklists in Jira and Confluence'
+        'Middle QA Engineer',
+        'Reason for Leaving: Pursued new opportunities due to unmet agreements with the employer',
+        'Conducted thorough gameplay testing to ensure a high-quality user experience',
+        'Developed and executed comprehensive test scenarios to identify issues',
+        'Documented bugs and collaborated with the development team for effective resolution',
+        'Analyzed and assessed game quality, providing actionable feedback for improvements',
+        'Performed regression testing to verify fixes and maintain software integrity',
+        'Tested across various platforms to ensure consistent performance and quality',
+        'Participated in test planning to align testing efforts with project goals',
+        'Provided constructive feedback on game design to enhance player engagement',
+        'Mentored and trained junior team members to foster a collaborative environment'
       ]
     }
   ];
