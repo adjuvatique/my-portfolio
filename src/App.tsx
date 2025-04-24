@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
-import Testimonials from './components/Testimonials';
+// import Testimonials from './components/Testimonials';  // удалено
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
@@ -12,18 +12,14 @@ import { ThemeProvider } from './context/ThemeContext';
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen font-sans antialiased transition-colors duration-300">
-        <Header />
-        <main>
-          <Hero />
-          <Skills />
-          <Projects />
-          <Experience />
-          <Testimonials />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
+      <Header />
+      <Hero />
+      <Skills />
+      <Projects />
+      <Experience />
+      {/* <Testimonials /> */}         {/* удалено */}
+      <Contact />
+      <Footer />
     </ThemeProvider>
   );
 }
