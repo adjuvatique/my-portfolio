@@ -1,33 +1,34 @@
 name: Deploy to GitHub Pages
 
-# Триггер на каждый пуш в ветку main
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Клонируем репозиторий
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-      # 2) Устанавливаем Node.js (версию указывайте ту, что используете)
       - uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      # 3) Устанавливаем зависимости
       - name: Install dependencies
         run: npm ci
 
-      # 4) Собираем проект
       - name: Build
         run: npm run build
 
-      # 5) Публикуем результат build (папка dist) в ветку gh-pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
